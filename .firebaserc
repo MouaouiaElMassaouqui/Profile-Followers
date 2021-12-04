@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "profile-followers"
+  },
+  "targets": {
+    "profile-followers": {
+      "hosting": {
+        "AppAngular": [
+          "profile-followers"
+        ]
+      }
+    }
+  }
+}

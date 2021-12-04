@@ -116,6 +116,16 @@
               "devServerTarget": "AppAngular:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "AppAngular:build:production",
+            "firebaseProject": "profile-followers",
+            "firebaseHostingSite": "profile-followers"
+          }
         }
       }
     }
