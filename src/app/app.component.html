@@ -1,0 +1,87 @@
+<!--<app-lesson></app-lesson>
+<app-panel>
+    <div class="header"> This is my Mouaouia header</div>
+    <div class="body">This is my Mouaouia bodyµ</div>
+</app-panel>-->
+<!-- <app-favorite [is-selected]="post.isFavorite" (change)="onFavoriteChanged($event)"></app-favorite>
+
+<div *ngIf='courses.length > 0; then listCourses else noCourse'> 
+    List of Courses
+</div>
+<ng-template #listCourses>
+    List of courses
+</ng-template>
+<ng-template #noCourse>
+    Courses doesn't exist yet
+</ng-template>
+
+<div  [hidden] = 'courses.length == 0'>
+    List of Courses
+</div>
+<div  [hidden] ='courses.length > 0'>
+  Courses doesn't exist yet
+</div>
+
+<ul class="nav nav-pills">
+    <li class="nav-item" ><a class="nav-link" [class.active] ="viewCourse == 'Angular'" (click)="viewCourse = 'Angular'">Angular</a></li>
+    <li class="nav-item" ><a  class="nav-link" [class.active] ="viewCourse == 'JAVA'" (click)="viewCourse = 'JAVA'">JAVA</a></li>
+    <li class="nav-item" ><a class="nav-link" [class.active] ="viewCourse == 'Spring'" (click)="viewCourse = 'Spring'">Spring</a></li>
+</ul>
+
+<div [ngSwitch]="viewCourse">
+    <div *ngSwitchCase="'Angular'"> Angular Course</div>
+    <div *ngSwitchCase="'JAVA'"> JAVA Course</div>
+    <div *ngSwitchCase="'Spring'"> Spring Course</div>
+    <div *ngSwitchDefault> ... another choose</div>
+
+</div>
+<br><br>
+
+<div class="mb-3">
+    <label for="Input1" class="form-label">Name</label>
+    <input type="text" class="form-control" id="Input1" placeholder="name" [(ngModel)] ="name">
+</div>
+<div class="mb-3">
+    <label for="Input2" class="form-label" >Language</label>
+    <input type="text" class="form-control" id="Input2" placeholder="Language" [(ngModel)] ="langage">
+</div>
+<button class="btn btn-primary border marginInput" (click)="addCourse(name,langage )">Add</button> 
+<button class="btn btn-success border" (click)="LoadFirst()">Load Courses</button>
+<table class="table">
+<thead>
+    <tr>
+   <th>#</th>
+    <th>Langage</th>
+    <th>Name</th>
+     <th>Pair</th>
+    </tr>
+</thead>
+<tbody >
+    <tr *ngFor="let course of courses; index as i; trackBy: trackCourses">
+<td>{{i}}</td>
+<td>{{course.langage}}</td>
+<td>{{course.name}}</td>
+<td><button class="btn btn-danger border" (click)="deleteCourse(i)">Delete</button> <button class="btn btn-warning border" (click)="updateCourse(course)">Edit</button></td>
+</tr>
+</tbody>
+</table> -->
+<br>
+<!-- <input type="text" name="name" [appInputFormat] = "'lowercase'" appSpecialAlphaNumeric> -->
+<!-- <div class="container">
+    <div class="col-md-6 col-md-offset-3">
+          <app-contact-form></app-contact-form>
+    </div>
+</div> -->
+<!-- <div class="container">
+    <div class="col-md-6 col-md-offset-3">
+        <app-posts></app-posts>
+    </div>
+</div> -->
+<!-- 
+<div class="container">
+    <div class="col-md-6 col-md-offset-3">
+<app-github-followers></app-github-followers>
+    </div>
+</div> -->
+<app-navbar></app-navbar>
+<router-outlet></router-outlet>

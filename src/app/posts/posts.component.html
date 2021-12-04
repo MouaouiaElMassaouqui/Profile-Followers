@@ -1,0 +1,39 @@
+
+<form action="">
+    <legend>Form title</legend>
+    <div class="form-group">
+        <label for="userId">userId</label>
+        <input type="text"  [(ngModel)]="post.userId" class="form-control" id="userId" placeholder="title" name="userId">
+    </div>
+    <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" [(ngModel)]="post.title" class="form-control" id="title" placeholder="title" name="title">
+    </div>
+    <div class="form-group">
+        <label for="body">Body</label>
+        <textarea type="text" [(ngModel)]="post.body" class="form-control" id="body" placeholder="body" name="body"></textarea>
+    </div>
+
+    <button class="btn btn-primary" *ngIf="appear"  (click)="addPost()">Add</button>
+    <button class="btn btn-info" *ngIf="!appear" (click)="updatePost(Post)">Update</button>
+</form>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>idUser</th>
+            <th>title</th>
+            <th>Body</th>
+             <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let post of posts">
+            <td>{{post.userId}}</td>
+            <td>{{post.title}}</td>
+            <td>{{post.body}}</td>
+            <td><button class="btn btn-warning border" (click)="editPost(post)">Edit</button> <button class="btn btn-danger border" (click)="deletePost(post)">Delete</button></td>
+        </tr>
+    </tbody>
+</table>

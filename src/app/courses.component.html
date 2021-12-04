@@ -1,0 +1,14 @@
+<h3 [textContent]="getTitle()" [style.textDecoration]="isActive ? 'underline' : 'overline' "></h3>
+
+<!-- <img [src]="image" [alt]="getTitle()"><br> -->
+<div (click) = "onClickDiv()"> 
+     <button (click)="onClick($event)" class="btn btn-primary" [class.Active]="isActive">Active</button>
+</div>
+
+ <!-- <input type="text" (keyup.enter) = "onKeyUp()"> -->
+ <input  #email type="text" (keyup.esc) = "onKeyUp(email)">
+ 
+
+<ul>
+    <li *ngFor='let langue of langauges'> {{langue}}</li>
+</ul>

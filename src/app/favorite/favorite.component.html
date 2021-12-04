@@ -1,0 +1,10 @@
+
+<div  class="card text-left">
+   <fa-icon [icon]="faStar"
+    (click)="onFavorite()"
+    [ngStyle]="{
+       'color' : isFavorite ? 'red' : 'blue', 'font-size' : isFavorite ? '20px' : '40px'
+    }"
+    ></fa-icon>
+  </div>
+

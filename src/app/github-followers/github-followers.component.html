@@ -1,0 +1,44 @@
+<!-- <form action="">
+    <legend>Form title</legend>
+    <div class="form-group">
+        <label for="userId">userId</label>
+        <input type="text" [(ngModel)]="post.userId" class="form-control" id="userId" placeholder="title" name="userId">
+    </div>
+    <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" [(ngModel)]="post.title" class="form-control" id="title" placeholder="title" name="title">
+    </div>
+    <div class="form-group">
+        <label for="body">Body</label>
+        <textarea type="text" [(ngModel)]="post.body" class="form-control" id="body" placeholder="body"
+            name="body"></textarea>
+    </div>
+
+    <button class="btn btn-primary" *ngIf="appear" (click)="addPost()">Add</button>
+    <button class="btn btn-info" *ngIf="!appear" (click)="updatePost(Post)">Update</button>
+</form> -->
+
+<p>followers</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Username</th>
+            <th>Type</th>
+            <th>avatar</th>
+            <th>Url</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let follower of followers">
+            <td>{{follower.id}}</td>
+            <td>{{follower.login}}</td>
+            <td>{{follower.type}}</td>
+            <td> <img [src]='follower.avatar_url' width="30px"></td>
+            <td><a [routerLink] ="['/followers', follower.id, follower.login]" 
+                   [queryParams] ="{page: 1, type: follower.type}"> {{follower.html_url}}</a></td> 
+            <!-- <td><button class="btn btn-warning border" (click)="editPost(post)">Edit</button> <button
+                    class="btn btn-danger border" (click)="deletePost(post)">Delete</button></td> -->
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,9 @@
+    <h5 [style.backgroundColor]="isActive ? 'green' : 'red'">{{Title}}</h5>
+
+     <img src="{{image}}" alt="{{titleImage}}"> <br/>
+
+     <button class="btn btn-primary"  (click)="onClick()">Mon button</button>
+
+    <ul>
+        <li *ngFor="let course of courses"> {{course}}</li>
+    </ul>

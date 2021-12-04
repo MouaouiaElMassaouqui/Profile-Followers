@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~Bootstrap/dist/css/bootstrap.css";
+
+.border {
+    border-color : white;
+}
+
+.marginInput{
+    margin-right: 5px;
+}
+
+.form-control.ng-touched.ng-invalid,.form-control.ng-dirty.ng-invalid {
+    border-color: rgb(224, 79, 79);
+}
